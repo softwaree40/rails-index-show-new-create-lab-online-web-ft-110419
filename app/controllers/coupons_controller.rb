@@ -14,7 +14,6 @@ class CouponsController < ApplicationController
     
     def create 
        @coupon = Coupon.create(params.require(:coupons).permit(:coupon_code,:store)
-       
        redirect_to coupon_path(@coupon.id)
     end
   
